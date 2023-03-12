@@ -1,0 +1,75 @@
+body {
+  background-color: #d6d7db;
+}
+.container {
+  background-color: #f7f6f9;
+  width: 900vh;
+  height: 90vh;
+  margin: 40px auto;
+  border-radius: 30px;
+}
+
+.side-bar {
+  background-color: white;
+  width: 40vh;
+  height: 90vh;
+  border-bottom-left-radius: 30px;
+  border-top-left-radius: 30px;
+  padding: 10px;
+}
+
+.SB-first {
+  margin: 40px 30px;
+}
+
+.hr {
+  color: #434344;
+}
+
+#map-img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+#search-container {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+#current-weather-img {
+  width: 256px;
+  height: 256px;
+  display: block;
+  margin: 40px auto;
+}
+
+#current-temp {
+  font-size: 60px;
+  font-weight: 500;
+}
+
+#unit {
+  font-size: 35px;
+  font-weight: 500;
+  position: relative;
+  top: -15px;
+}
+
+#current-date {
+  margin: 30px 0;
+}
+
+#current-hour {
+  opacity: 0.5;
+}
+
+#current-city {
+  margin: 30px 0 20px 0;
+  text-align: center;
+}
+
+#current-location {
+  text-align: center;
+}
