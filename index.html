@@ -11,6 +11,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="src/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <title>Weather Forecast</title>
   </head>
   <body>
@@ -22,12 +23,13 @@
             <input type="search" placeholder="Search for places..." class="form-control border-0" id="search-box" autocomplete="off">
             
           </form>
-          <img src="src/images/cloudy.png" alt="current weather" id="current-weather-img" >
-          <div id="current-temp">12°<span id="unit">C</span></div>
-          <div id="current-date">Monday, <span id="current-hour">16:00</span></div>
+          <img src="src/images/loading.gif" alt="current weather" id="current-weather-img" >
+          <div><span id="current-temp">...</span><span id="unit">°C</span></div>
+          <div id="current-date">...</div>
           <hr class="hr">
-          <div id="current-city"><span id="city">Bushehr</span>, <span id="country">Iran</span></div>
-          <div id="current-location"><span>28.9145° N</span>, <span>50.8279° E</span></div>
+          <div id="current-city"><span id="city">City</span>, <span id="country">Country</span></div>
+          <img src="src/images/location.gif" id="current-weather-img">
+          <div id="current-location"><span id="lat">Latitude</span>° N, <span id="lon">Longitude</span>° E</div>
         </div>
       </div>
       <small>This project was coded by Fatemeh Dashtizadeh and is open-source on GitHub and hosted on Netlify</small>
