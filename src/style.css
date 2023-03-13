@@ -1,25 +1,36 @@
 body {
   background-color: #d6d7db;
 }
+small {
+  display: block;
+  text-align: center;
+}
+small a {
+  text-decoration: none;
+  color: #f48a8a;
+}
+
 .container {
   background-color: #f7f6f9;
-  width: 900vh;
-  height: 90vh;
+  width: 80%;
+  height: 80%;
   margin: 40px auto;
   border-radius: 30px;
+  padding: 0;
 }
 
 .side-bar {
   background-color: white;
-  width: 40vh;
-  height: 90vh;
-  border-bottom-left-radius: 30px;
   border-top-left-radius: 30px;
-  padding: 10px;
+  border-bottom-left-radius: 30px;
+  padding: 0;
+  margin: 0;
+  width: 25%;
+  height: 100%;
 }
 
-.SB-first {
-  margin: 40px 30px;
+.wrapper {
+  padding: 50px 40px;
 }
 
 .hr {
@@ -39,8 +50,11 @@ body {
 }
 
 #current-weather-img {
+  width: 80px;
+  height: 80px;
   display: block;
   margin: 40px auto;
+  padding: 0;
 }
 
 #current-temp {

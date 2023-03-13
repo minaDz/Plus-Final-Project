@@ -17,24 +17,45 @@
   <body>
     <div class="container">
       <div class="row side-bar">
-        <div class="col SB-first">
+        <div class="col wrapper">
           <form id="search-container">
-            <img src="src/images/map.png" alt="location" id="map-img">
-            <input type="search" placeholder="Search for places..." class="form-control border-0" id="search-box" autocomplete="off">
-            
+            <img src="src/images/map.png" alt="location" id="map-img" />
+            <input
+              type="search"
+              placeholder="Search for places..."
+              class="form-control border-0"
+              id="search-box"
+              autocomplete="off"
+            />
           </form>
-          <img src="src/images/loading.gif" alt="current weather" id="current-weather-img" >
+          <img
+            src="src/images/loading.gif"
+            alt="current weather"
+            id="current-weather-img"
+          />
           <div><span id="current-temp">...</span><span id="unit">°C</span></div>
           <div id="current-date">...</div>
-          <hr class="hr">
-          <div id="current-city"><span id="city">City</span>, <span id="country">Country</span></div>
-          <img src="src/images/location.gif" id="current-weather-img">
-          <div id="current-location"><span id="lat">Latitude</span>° N, <span id="lon">Longitude</span>° E</div>
+          <hr class="hr" />
+          <div id="current-city">
+            <span id="city">City</span>, <span id="country">Country</span>
+          </div>
+          <img src="src/images/location.gif" id="current-weather-img" />
+          <div id="current-location">
+            <span id="lat">Latitude</span>° N, <span id="lon">Longitude</span>°
+            E
+          </div>
         </div>
       </div>
-      <small>This project was coded by Fatemeh Dashtizadeh and is open-source on GitHub and hosted on Netlify</small>
     </div>
-    </div>
+
+    <small
+      >This project was coded by Fatemeh Dashtizadeh and is
+      <a href="https://github.com/minaDz/Plus-Final-Project" target="_blank"
+        >open-source on GitHub</a
+      >
+      and <a href="" target="_blank">hosted on Netlify</a></small
+    >
+
     <script src="src/app.js"></script>
   </body>
 </html>
