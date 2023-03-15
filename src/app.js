@@ -54,7 +54,29 @@ function submit(event){
     findCity(input.value);
 }
 
+
+
+function displayForecast(){
+let forecast  = document.querySelector("#Forecast");
+let forecastHtml =`<div class="row">`;
+let days=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+days.forEach(function(day){
+  forecastHtml=forecastHtml+`
+  <div class="col f-card">
+  <div id="day">${day}</div>
+  <img src="src/images/loading.gif" alt="" id="s-icon"/>
+  <div><span> 12 </span> <span> 18 </span></div>
+  </div>`;
+});
+forecastHtml=forecastHtml+`</div>`;
+forecast.innerHTML=forecastHtml;
+}
+
+
+
+
 let search = document.querySelector("#search-container");
 search.addEventListener("submit",submit);
 
 findCity("bushehr");
+displayForecast();

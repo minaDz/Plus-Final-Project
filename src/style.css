@@ -70,6 +70,30 @@ small a {
   font-size: 15px;
 }
 
+.rowN1 {
+  margin-top: 60px;
+}
+.rowN1,
+.rowN2,
+.rowN3 {
+  justify-content: space-between;
+}
+
+.text {
+  font-size: 15px;
+  padding: 15px;
+}
+
+.f-card {
+  width: 12%;
+  height: 100%;
+  background-color: white;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+}
+
 #map-img {
   width: 30px;
   height: 30px;
@@ -115,4 +139,9 @@ small a {
 #current-location {
   text-align: center;
   font-weight: bold;
+}
+
+#s-icon {
+  width: 30px;
+  height: 30px;
 }
