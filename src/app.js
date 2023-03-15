@@ -28,6 +28,18 @@ function displayTemp(response){
     icon.setAttribute("src",response.data.condition.icon_url);
     let date = document.querySelector("#current-date");
     date.innerHTML = formatDate(response.data.time * 1000);
+    let description = document.querySelector("#Description");
+    description.innerHTML = response.data.condition.description;
+    let feel = document.querySelector("#Feels-like");
+    feel.innerHTML = Math.round(response.data.temperature.feels_like);
+    let wind = document.querySelector("#Wind-Status");
+    wind.innerHTML = Math.round(response.data.wind.speed);
+    let humidity = document.querySelector("#Humidity");
+    humidity.innerHTML = response.data.temperature.humidity;
+    let pressure = document.querySelector("#Pressure");
+    pressure.innerHTML = response.data.temperature.pressure;
+
+
 } 
 
 function findCity(city){

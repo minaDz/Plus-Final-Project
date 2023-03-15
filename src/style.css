@@ -1,5 +1,9 @@
 body {
   background-color: #d6d7db;
+  font-family: "Libre Baskerville", serif;
+  font-family: "Pacifico", cursive;
+  font-family: "Playfair Display", serif;
+  font-family: "Poppins", sans-serif;
 }
 small {
   display: block;
@@ -45,6 +49,25 @@ small a {
 
 .hr {
   color: #434344;
+}
+
+.card {
+  font-weight: bold;
+  width: 30%;
+  height: 160px;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.card div {
+  text-align: center;
+  padding: 30px;
+  font-size: 25px;
+}
+
+.unit {
+  font-size: 15px;
 }
 
 #map-img {
