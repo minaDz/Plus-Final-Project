@@ -12,6 +12,11 @@ function formatDate(timestemp){
       }
     return `${day} ${hour}:${min}`;
 }
+function getForecast(coordinates){
+  let apiKey="618babd8a78c104b6a8d38473t84aefo";
+  let apiUrl=`https://api.shecodes.io/weather/v1/forecast?lon=${coordinates.longitude}&lat=${coordinates.latitude}&key=${apiKey}`;
+  axios.get(apiUrl).then(displayForecast);
+}
 function displayTemp(response){
     console.log(response.data);
     let currentTemp = document.querySelector("#current-temp");
@@ -38,8 +43,7 @@ function displayTemp(response){
     humidity.innerHTML = response.data.temperature.humidity;
     let pressure = document.querySelector("#Pressure");
     pressure.innerHTML = response.data.temperature.pressure;
-
-
+    getForecast(response.data.coordinates);
 } 
 
 function findCity(city){
@@ -54,18 +58,30 @@ function submit(event){
     findCity(input.value);
 }
 
+function formatDay(timestamp){
+  let date = new Date(timestamp*1000);
+  let day = date.getDay();
+  let days=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+  return days[day];
+
+}
 
 
-function displayForecast(){
+function displayForecast(response){
+let forecastElement = response.data.daily;
+console.log(response.data.daily);
 let forecast  = document.querySelector("#Forecast");
 let forecastHtml =`<div class="row">`;
-let days=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
-days.forEach(function(day){
+forecastElement.forEach(function(forecastday){
   forecastHtml=forecastHtml+`
   <div class="col f-card">
-  <div id="day">${day}</div>
-  <img src="src/images/loading.gif" alt="" id="s-icon"/>
-  <div><span> 12 </span> <span> 18 </span></div>
+  <div id="day">${formatDay(forecastday.time)}</div>
+  <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${forecastday.condition.icon}.png" alt="" id="s-icon"/>
+  <div>
+  <span>${Math.round(forecastday.temperature.maximum)}</span>     
+
+  <span>${Math.round(forecastday.temperature.minimum)}</span>
+  </div>
   </div>`;
 });
 forecastHtml=forecastHtml+`</div>`;
@@ -79,4 +95,3 @@ let search = document.querySelector("#search-container");
 search.addEventListener("submit",submit);
 
 findCity("bushehr");
-displayForecast();
