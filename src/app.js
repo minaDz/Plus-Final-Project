@@ -78,9 +78,9 @@ forecastElement.forEach(function(forecastday){
   <div id="day">${formatDay(forecastday.time)}</div>
   <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${forecastday.condition.icon}.png" alt="" id="s-icon"/>
   <div>
-  <span>${Math.round(forecastday.temperature.maximum)}</span>     
+  <span>${Math.round(forecastday.temperature.maximum)}</span>°C     
 
-  <span>${Math.round(forecastday.temperature.minimum)}</span>
+  <span>${Math.round(forecastday.temperature.minimum)}</span>°C
   </div>
   </div>`;
 });
