@@ -54,7 +54,7 @@ small a {
 .card {
   font-weight: bold;
   width: 30%;
-  height: 160px;
+  height: 100%;
   margin: 10px;
   padding: 20px;
   border-radius: 15px;
